@@ -1,0 +1,20 @@
+filegroup(
+    name = "root-files",
+    srcs = [
+        # Root Files
+        ".editorconfig",
+        ".gitignore",
+        ".prettierignore",
+        ".prettierrc",
+        "README.md",
+        "angular.json",
+        "karma.conf.js",
+        "nx.json",
+        "package.json",
+        "tsconfig.json",
+        "tslint.json",
+        "yarn.lock",
+        
+    ],
+    visibility = ["//:__subpackages__"],
+)

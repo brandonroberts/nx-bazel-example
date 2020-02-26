@@ -181,7 +181,7 @@ function createRootBuildFile() {
   };
 }
 
-const runInit = schematic<{}>('init', {});
+const runInit = schematic<{}>('bazel-init', {});
 
 export default (): Rule => {
   return (host: Tree) => {
