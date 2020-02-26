@@ -1079,6 +1079,11 @@
   resolved "https://registry.yarnpkg.com/@istanbuljs/schema/-/schema-0.1.2.tgz#26520bf09abe4a5644cd5414e37125a8954241dd"
   integrity sha512-tsAQNx32a8CoFhjhijUIhI4kccIAgmGhy8LZMZgGfmXcpMbPRUqn5LWmgRttILi6yeGmBJd2xsPkFMs0PzgPCw==
 
+"@ngrx/store@^9.0.0-beta.2":
+  version "9.0.0-beta.2"
+  resolved "https://registry.yarnpkg.com/@ngrx/store/-/store-9.0.0-beta.2.tgz#b9d62203ea3cda7df5dde64ade41e968162e841b"
+  integrity sha512-pduU22BIsGSLpS5lB+xEoctICGEoYDopeRkTxGmkZvIj/yX5QIiv5m8I+a0E4MWJVpXeeap1MPWL0cVrXHpKog==
+
 "@ngtools/webpack@9.0.1":
   version "9.0.1"
   resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-9.0.1.tgz#36fff5b269959b37eee4c23c8c22bd7686aa4860"
