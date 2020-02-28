@@ -7,7 +7,7 @@ workspace(
     name = "nxbazel",
     # Map the @npm bazel workspace to the node_modules directory.
     # This lets Bazel use the same node_modules as other local tooling.
-    managed_directories = {"@npm": ["node_modules"]},
+    # managed_directories = {"@npm": ["node_modules"]},
 )
 
 # Install the nodejs "bootstrap" package
@@ -27,6 +27,7 @@ yarn_install(
     # Name this npm so that Bazel Label references look like @npm//package
     name = "npm",
     package_json = "//:package.json",
+    symlink_node_modules = False,
     yarn_lock = "//:yarn.lock",
 )
 
