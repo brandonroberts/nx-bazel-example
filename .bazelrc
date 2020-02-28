@@ -73,6 +73,10 @@ common --experimental_allow_incremental_repository_updates
 build --incompatible_strict_action_env
 run --incompatible_strict_action_env
 
+# The Angular CLI will by default try to write to a cache, but under Bazel it's a read only fs
+# so we need to disable it with this env var
+build --define=NG_BUILD_CACHE=false
+
 # Load any settings specific to the current user.
 # .bazelrc.user should appear in .gitignore so that settings are not shared with team members
 # This needs to be last statement in this
