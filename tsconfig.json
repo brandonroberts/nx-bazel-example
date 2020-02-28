@@ -16,7 +16,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nxbazel/my-lib": ["libs/my-lib/src/index.ts"]
+      "@nxbazel/my-lib": ["libs/my-lib/src/index.ts"],
+      "@nxbazel/ng-lib": ["libs/ng-lib/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

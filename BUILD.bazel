@@ -2,6 +2,7 @@ filegroup(
     name = "root-files",
     srcs = [
         # Root Files
+        ".bazelignore",
         ".editorconfig",
         ".gitignore",
         ".prettierignore",

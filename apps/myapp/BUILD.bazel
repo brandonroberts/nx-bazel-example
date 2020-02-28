@@ -16,7 +16,6 @@ filegroup(
 
 nx(
     name = "build",
-    configuration_env_vars = ["NG_BUILD_CACHE"],
     args = [
         "run",
         "myapp:build",
@@ -51,7 +50,6 @@ nx(
 
 nx(
     name = "serve",
-    configuration_env_vars = ["NG_BUILD_CACHE"],
     args = [
         "run",
         "myapp:serve",

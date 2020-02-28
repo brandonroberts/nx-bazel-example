@@ -148,6 +148,46 @@
         }
       },
       "schematics": {}
+    },
+    "ng-lib": {
+      "projectType": "library",
+      "root": "libs/ng-lib",
+      "sourceRoot": "libs/ng-lib/src",
+      "prefix": "nxbazel",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/ng-lib/tsconfig.lib.json",
+            "project": "libs/ng-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/ng-lib/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ng-lib/tsconfig.lib.json",
+              "libs/ng-lib/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/ng-lib/**"]
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "preserveSymlinks": true,
+            "main": "libs/ng-lib/src/test.ts",
+            "tsConfig": "libs/ng-lib/tsconfig.spec.json",
+            "karmaConfig": "libs/ng-lib/karma.conf.js"
+          }
+        }
+      },
+      "schematics": {}
     }
   },
   "cli": {
