@@ -6,7 +6,7 @@ export class AppPage {
   }
 
   getTitleText(): Promise<string> {
-    return element(by.css('nxbazel-root .content span')).getText() as Promise<
+    return element(by.css('nxbazel-root header h1')).getText() as Promise<
       string
     >;
   }
