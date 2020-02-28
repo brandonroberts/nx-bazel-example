@@ -11,6 +11,8 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "forkTypeChecker": false,
+            "preserveSymlinks": true,
             "outputPath": "dist/apps/myapp",
             "index": "apps/myapp/src/index.html",
             "main": "apps/myapp/src/main.ts",
@@ -34,6 +36,7 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
+              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -82,6 +85,7 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
+            "preserveSymlinks": true,
             "main": "apps/myapp/src/test.ts",
             "tsConfig": "apps/myapp/tsconfig.spec.json",
             "karmaConfig": "apps/myapp/karma.conf.js",
