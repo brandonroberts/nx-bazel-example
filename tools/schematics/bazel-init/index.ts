@@ -59,7 +59,9 @@ export default (): Rule => {
     const packageJson = readJsonInTree(host, 'package.json');
     return chain([
       updateGitIgnore(),
-      (!packageJson.devDependencies['@bazel/bazel'] ? addRequiredPackages : noop) as any,
+      (!packageJson.devDependencies['@bazel/bazel']
+        ? addRequiredPackages
+        : noop) as any,
       addFiles()
     ]);
   };
