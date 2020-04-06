@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { StoreModule } from '@ngrx/store';
 import { MyLibModule } from '@nxbazel/my-lib';
+import { NgLibModule } from '@nxbazel/ng-lib';
 
 @NgModule({
   declarations: [AppComponent],
@@ -12,7 +13,8 @@ import { MyLibModule } from '@nxbazel/my-lib';
     BrowserModule,
     RouterModule.forRoot([], { initialNavigation: 'enabled' }),
     StoreModule.forRoot({}, {}),
-    MyLibModule
+    MyLibModule,
+    NgLibModule
   ],
   providers: [],
   bootstrap: [AppComponent]

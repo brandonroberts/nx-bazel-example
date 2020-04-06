@@ -8,6 +8,7 @@ filegroup(
     srcs = glob(["**"]) + [
         # Dependencies
         "//libs/my-lib:my-lib",
+        "//libs/ng-lib:ng-lib",
         
     ],
     visibility = ["//visibility:public"],
@@ -95,7 +96,6 @@ nx(
 
 nx_test(
     name = "lint",
-    configuration_env_vars = ["NG_BUILD_CACHE"],
     args = [
         "run",
         "myapp:lint",

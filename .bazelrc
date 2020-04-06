@@ -77,6 +77,9 @@ run --incompatible_strict_action_env
 # so we need to disable it with this env var
 build --define=NG_BUILD_CACHE=false
 
+# Additional memory-saving options for build
+build --discard_analysis_cache --nokeep_state_after_build --notrack_incremental_state
+
 # Load any settings specific to the current user.
 # .bazelrc.user should appear in .gitignore so that settings are not shared with team members
 # This needs to be last statement in this
